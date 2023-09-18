@@ -1,0 +1,2 @@
+.fruits{display:flex;gap:30px;justify-content:space-evenly}.each-fruit{border:1px solid #ff4500;padding:20px}.comparison-table{border-collapse:collapse;margin-top:20px;width:100%}.comparison-table td,.comparison-table th{border:1px solid #ddd;padding:8px;text-align:left}.comparison-table th{background-color:#f2f2f2}.comparison-table tr:hover{background-color:#ddd}.btn{background-color:#fff;border:1px solid #ff4500;color:#ff4500;cursor:pointer;padding:6px 16px}.btn:hover{background-color:#ff4500;border:none;color:#fff}
+/*# sourceMappingURL=main.168bf03f.css.map*/

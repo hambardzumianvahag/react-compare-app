@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-compare-app/static/css/main.168bf03f.css",
+    "main.js": "/react-compare-app/static/js/main.6693ef47.js",
+    "index.html": "/react-compare-app/index.html",
+    "main.168bf03f.css.map": "/react-compare-app/static/css/main.168bf03f.css.map",
+    "main.6693ef47.js.map": "/react-compare-app/static/js/main.6693ef47.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.168bf03f.css",
+    "static/js/main.6693ef47.js"
+  ]
+}
