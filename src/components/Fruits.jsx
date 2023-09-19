@@ -1,20 +1,23 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addFruitToSelection,
+  removeFruitFromSelection,
+} from "../redux/slices/fruitStore";
 
 const Fruits = () => {
   const fruits = useSelector((state) => state.fruit.fruits);
-  const [selectedFruits, setSelectedFruits] = useState([]);
+  const selectedFruits = useSelector((state) => state.fruit.selectedFruits);
+  const dispatch = useDispatch();
+
   const handleCompareClick = (fruit) => {
     if (!selectedFruits.includes(fruit)) {
-      setSelectedFruits([...selectedFruits, fruit]);
+      dispatch(addFruitToSelection(fruit));
     }
   };
 
   const handleRemoveClick = (fruitToRemove) => {
-    const updatedSelectedFruits = selectedFruits.filter(
-      (fruit) => fruit !== fruitToRemove
-    );
-    setSelectedFruits(updatedSelectedFruits);
+    dispatch(removeFruitFromSelection(fruitToRemove.name));
   };
   return (
     <div>

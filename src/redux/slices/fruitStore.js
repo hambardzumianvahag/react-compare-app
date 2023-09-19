@@ -33,10 +33,23 @@ const initialState = {
         "https://upload.wikimedia.org/wikipedia/commons/9/96/Strawberry-icon-1000px.png",
     },
   ],
+  selectedFruits: [],
 };
+
 export const fruitSlice = createSlice({
   name: "fruit",
   initialState,
-  reducers: {},
+  reducers: {
+    addFruitToSelection: (state, action) => {
+      state.selectedFruits.push(action.payload);
+    },
+    removeFruitFromSelection: (state, action) => {
+      state.selectedFruits = state.selectedFruits.filter(
+        (fruit) => fruit.name !== action.payload
+      );
+    },
+  },
 });
+export const { addFruitToSelection, removeFruitFromSelection } =
+  fruitSlice.actions;
 export default fruitSlice.reducer;
